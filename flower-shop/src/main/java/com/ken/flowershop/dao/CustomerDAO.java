@@ -1,6 +1,6 @@
-package com.shop.flower.dao;
+package com.ken.flowershop.dao;
 
-import com.shop.flower.entity.Customer;
+import com.ken.flowershop.entity.Customer;
 
 public interface CustomerDAO {
     Customer retrieve(int id);

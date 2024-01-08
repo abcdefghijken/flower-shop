@@ -1,8 +1,10 @@
-package com.shop.flower.dao;
+package com.ken.flowershop.dao;
 
-import com.shop.flower.entity.Employee;
+import com.ken.flowershop.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 }

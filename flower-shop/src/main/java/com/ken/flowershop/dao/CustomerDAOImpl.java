@@ -1,6 +1,6 @@
-package com.shop.flower.dao;
+package com.ken.flowershop.dao;
 
-import com.shop.flower.entity.Customer;
+import com.ken.flowershop.entity.Customer;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.shop.flower.entity;
+package com.ken.flowershop.entity;
 
 import jakarta.persistence.*;
 

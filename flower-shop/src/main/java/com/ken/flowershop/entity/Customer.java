@@ -1,9 +1,10 @@
-package com.shop.flower.entity;
+package com.ken.flowershop.entity;
 
 import jakarta.persistence.*;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
 import java.util.List;
 
 @Entity
@@ -13,11 +14,9 @@ public class Customer {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
-    @NotNull
     private int id;
 
     @Column(name="short_name")
-    @NotNull
     @Size(min = 1, max = 20, message = "Short Name should be between length 1 and 20.")
     private String shortName;
 
@@ -44,9 +43,8 @@ public class Customer {
     @NotNull
     private String postalCode;
 
-    @OneToMany
-    @JoinColumn(name = "customer_id")
-    private List<Order> orders;
+    @OneToMany(mappedBy = "customer", cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.PERSIST, CascadeType.REFRESH})
+    private List<Orders> orders;
 
     public Customer() {}
 
@@ -113,6 +111,14 @@ public class Customer {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public List<Orders> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Orders> orders) {
+        this.orders = orders;
     }
 
     @Override

@@ -1,10 +1,10 @@
-package com.shop.flower;
+package com.ken.flowershop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FlowerApplicationTests {
+class FlowerShopApplicationTests {
 
 	@Test
 	void contextLoads() {
